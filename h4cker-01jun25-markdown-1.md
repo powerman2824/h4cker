@@ -17,7 +17,7 @@
   - 8GB  
 - **Storage**:  
   - 128GB  
-- **Infographic**:  
+- **Infographic**:
   - ![507](/pics/507.png)
   - cmdline:
 ```bash
@@ -46,6 +46,7 @@ overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/866b8c8f7df850453eba
 └──╼ #
 ```
 </details>
+
 <details>
 <summary>Installation:</summary>
 
@@ -84,67 +85,55 @@ overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/866b8c8f7df850453eba
        - ```docker network prune -f```
     - 4. (Optional) Verify Clean State
       - ```docker ps -a```
+  - Copy provider docker-compose file & keep as referance
+    - ```cp docker-compose.yml example-docker-compose.yml```
+    - ![689](pics/689.png)
+  - Create/Edit docker-compose file that supports ARM arch
+    - ```nano docker-compose.yml```
+    - ![693](pics/693.png)
+    - New docker-compose.yml file that supports ARM arch & recreates networks
+      - ```docker-compose.yaml```
+```yaml
+services:
+  webgoat:
+	container_name: webgoat
+	image: webgoat/webgoat:v2023.5
+	restart: unless-stopped
+	networks:
+  	websploit:
+    	ipv4_address: 10.6.6.11
+  juice-shop:
+	container_name: juice-shop
+	image: bkimminich/juice-shop
+	restart: unless-stopped
+	networks:
+  	websploit:
+    	ipv4_address: 10.6.6.12
+  dvwa:
+	container_name: dvwa
+	image: cambarts/arm-dvwa:latest
+	restart: unless-stopped
+	networks:
+  	websploit:
+    	ipv4_address: 10.6.6.13
+networks:
+  websploit:
+	driver: bridge
+	ipam:
+  	config:
+    	- subnet: 10.6.6.0/24
+      	gateway: 10.6.6.1
+```
+  - Build & start new docker containers & network
+    - ```docker-compose up -d```
+  - Confirm containers and network are working properly
+    - ```docker ps```
+    - ![707](pics/707.png)
+  - Use Websploit built in container scanner
+    - ```containers```
+    ` ![710](pics/710.png)
 
 </details>
-
-
-
-- Stay in the root directory & shutdown & remove all running conatiners
-
-  - 1. Stop All Containers
-
-docker stop $(docker ps -aq)
-
-  - 2. Remove All Containers
-
-docker rm $(docker ps -aq)
-
-  - 3. (Optional) Clean Up Volumes and Networks
-
-docker volume prune -f
-docker network prune -f
-
-  - 4. (Optional) Verify Clean State
-
-docker ps -a
-
-- Copy provider docker-compose file & keep as referance
-
-cp docker-compose.yml example-docker-compose.yml
-
-  - 
-![689](C:/Users/mrcaf/Documents/h4ckForLife/689.png)
-
-- Create/Edit docker-compose file that supports ARM arch
-
-nano docker-compose.yml
-
-  - 
-![693](C:/Users/mrcaf/Documents/h4ckForLife/693.png)
-
-  - New docker-compose.yml file that supports ARM arch & recreates networks
-
-    - docker-compose.yaml
-
-
-
-- Build & start new docker containers & network
-
-docker-compose up -d
-
-- Confirm containers and network are working properly
-
-docker ps
-
-  - 
-![707](C:/Users/mrcaf/Documents/h4ckForLife/707.png)
-
-- Use Websploit built in container scanner
-
-containers
-
-  - 
-![710](C:/Users/mrcaf/Documents/h4ckForLife/710.png)
 
 ## Recon
 
