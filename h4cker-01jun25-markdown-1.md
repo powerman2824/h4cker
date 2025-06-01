@@ -37,8 +37,8 @@ Omar Santos is a distinguished figure in the cybersecurity community, renowned f
   - Co-chair of the Forum of Incident Response and Security Teams (FIRST) PSIRT Special Interest Group (SIG).
 #### Omar is also a prolific author, having written over 25 books and 21 video courses covering topics like ethical hacking, penetration testing, and AI security.
 
-### Lab Setup:
-
+# Lab Setup:
+---
 <details>
 <summary>Equipment:</summary>
 
@@ -172,77 +172,31 @@ networks:
 
 </details>
 
-## Recon
+# Recon
+Phase 1: Network Recon (Nmap)
+- What I did:
+  - I began by scanning the internal RaspberryPi4-WebSploit network (10.6.6.0/24) using Nmap to identify live hosts and open TCP ports. This provided a broad view of available services and gave me three target IPs with interesting ports, including web-facing services on ports 80, 8080, 3000, and 9090.
+- Why I did it:
+  - To enumerate active hosts and map the attack surface
+  - Identify potential web services to investigate further
+  - Started with a scan using Nmap on network 10.6.6.0/24
+Phase 2: Web Recon (Nikto)
+- What I did:
+  - I then ran Nikto on the discovered web services to detect common vulnerabilities, misconfigurations, and hidden directories. This revealed accessible paths like /dump.tgz, /database.tgz, and /config/, as well as outdated Apache and PHP versions.
+- Why I did it:
+  - To find low-hanging fruit like open directories, outdated versions
+  - Nikto is fast and automated, making it great for early recon
+  - Scaned host indivisual with Nikto
+Phase 3: Web App Assessment (ZAP)
+- What I did:
+  - Based on the Nikto results, I progressed to OWASP ZAP for a more in-depth and interactive analysis of the web applications. I chose ZAP to perform both passive and active scans, observe requests in real time, and explore site structure using spidering tools.
+- Why I did it:
+  - Unlike Nikto, ZAP allows manual interaction, auth testing, and deeper scan customization
+  - I can inspect HTTP headers, cookies, authentication flows, and inject test payloads
+  - ZAP supports proxying a browser, ideal for dynamic and client-heavy web apps
+# Attack
 
+# ExFill & Reporting
 
-### Phase 1: Network Recon (Nmap)
-
-
-#### What I did:
-
-
-##### I began by scanning the internal RaspberryPi4-WebSploit network (10.6.6.0/24) using Nmap to identify live hosts and open TCP ports. This provided a broad view of available services and gave me three target IPs with interesting ports, including web-facing services on ports 80, 8080, 3000, and 9090.
-
-
-#### Why I did it:
-
-
-##### To enumerate active hosts and map the attack surface
-
-
-##### Identify potential web services to investigate further
-
-
-#### Started with a scan using Nmap on network 10.6.6.0/24
-
-
-### Phase 2: Web Recon (Nikto)
-
-
-#### What I did:
-
-
-##### I then ran Nikto on the discovered web services to detect common vulnerabilities, misconfigurations, and hidden directories. This revealed accessible paths like /dump.tgz, /database.tgz, and /config/, as well as outdated Apache and PHP versions.
-
-
-#### Why I did it:
-
-
-##### To find low-hanging fruit like open directories, outdated versions
-
-
-##### Nikto is fast and automated, making it great for early recon
-
-
-#### Scaned host indivisual with Nikto
-
-
-### Phase 3: Web App Assessment (ZAP)
-
-
-#### What I did:
-
-
-##### Based on the Nikto results, I progressed to OWASP ZAP for a more in-depth and interactive analysis of the web applications. I chose ZAP to perform both passive and active scans, observe requests in real time, and explore site structure using spidering tools.
-
-
-#### Why I did it:
-
-
-##### Unlike Nikto, ZAP allows manual interaction, auth testing, and deeper scan customization
-
-
-##### I can inspect HTTP headers, cookies, authentication flows, and inject test payloads
-
-
-##### ZAP supports proxying a browser, ideal for dynamic and client-heavy web apps
-
-
-## Attack
-
-
-## ExFill & Reporting
-
-
-## References
+# References
 
