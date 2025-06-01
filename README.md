@@ -38,7 +38,6 @@ Omar Santos is a distinguished figure in the cybersecurity community, renowned f
 #### Omar is also a prolific author, having written over 25 books and 21 video courses covering topics like ethical hacking, penetration testing, and AI security.
 
 # Lab Setup:
----
 <details>
 <summary>Equipment:</summary>
 
@@ -171,6 +170,12 @@ networks:
     - ![710](pics/710.png)
 
 </details>
+
+---
+
+### This is your Lab, it's time to ***LEARN***! 
+
+---
 
 # Recon
 ### Phase 1: Network Recon (Nmap)
