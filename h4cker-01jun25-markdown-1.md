@@ -1,8 +1,41 @@
 # RaspberryPi4-WebSploit
+A penetration testing environment deployed on Raspberry Pi 4 running Parrot OS, using Dockerized vulnerable apps and standard recon tools (Nmap, Nikto, OWASP ZAP, and more).
 
+## Lab Enviroment Overview
+This lab is designed to simulate a realistic penetration testing workflow using ARM-compatible infrastructure, containerized vulnerable apps, and open-source tools — all hosted on a Raspberry Pi 4 running Parrot OS.
 
-## Lab Enviroment
-
+### Why a Raspberry Pi 4?
+The Raspberry Pi 4 Model B was chosen because:
+- Low cost & low power: Ideal for building self-contained, always-on testing environments.
+- ARM architecture: Mimics the limitations of IoT and embedded systems — common real-world targets.
+- 8GB RAM model: Provides enough resources to run multiple Docker containers and tools simultaneously.
+- Portability: Easy to deploy anywhere and useful for air-gapped, secure testing environments.
+### Why Parrot OS?
+Parrot Security OS was chosen for the following reasons:
+- Security-focused distro: Preinstalled with ethical hacking and digital forensics tools.
+- Lightweight on ARM: Performs better than heavier distros like Kali on a Pi.
+- Debian-based: Easy to update, manage, and compatible with most pentesting tools.
+- Active support for ARM: Parrot officially supports Raspberry Pi installations.
+### Why Docker?
+All vulnerable apps (WebGoat, DVWA, Juice Shop) are containerized because:
+- Isolation: Each app runs in its own networked container.
+- Reproducibility: Labs can be rebuilt with a single command ```docker compose up -d```.
+- Customization: Easy to assign static IPs, expose specific ports, and simulate real networks.
+- Performance: Docker’s lightweight containers run efficiently on ARM.
+### Why Use WebSploit?
+WebSploit Labs is an educational platform developed by Omar Santos to facilitate hands-on learning in cybersecurity domains such as ethical hacking, bug hunting, incident response, digital forensics, and threat hunting.
+- Key features of WebSploit Labs include:
+  - Deployment of intentionally vulnerable applications (e.g., WebGoat, DVWA, Juice Shop) within Docker containers.
+  - Compatibility with security-focused operating systems like Kali Linux and Parrot Security OS.
+  - Inclusion of over 9,000 cybersecurity resources and more than 500 distinct exercises.
+#### WebSploit Labs has been widely adopted by educational institutions worldwide and is utilized in various training sessions, including those at DEF CON.
+### About Omar Santos
+Omar Santos is a distinguished figure in the cybersecurity community, renowned for his contributions to ethical hacking, vulnerability research, incident response, and AI security. He serves as a Distinguished Engineer at Cisco, focusing on product security and incident response.
+- Beyond his role at Cisco, Omar is deeply involved in various industry initiatives:
+  - Lead of the DEF CON Red Team Village, where he organizes hands-on workshops and challenges. 
+  - Chair of the Common Security Advisory Framework (CSAF) Technical Committee under OASIS Open.
+  - Co-chair of the Forum of Incident Response and Security Teams (FIRST) PSIRT Special Interest Group (SIG).
+#### Omar is also a prolific author, having written over 25 books and 21 video courses covering topics like ethical hacking, penetration testing, and AI security.
 
 ### Lab Setup:
 
