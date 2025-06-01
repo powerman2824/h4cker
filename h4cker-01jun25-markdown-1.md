@@ -96,33 +96,37 @@ overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/866b8c8f7df850453eba
 ```yaml
 services:
   webgoat:
-	container_name: webgoat
-	image: webgoat/webgoat:v2023.5
-	restart: unless-stopped
-	networks:
-  	websploit:
-    	ipv4_address: 10.6.6.11
+    container_name: webgoat
+    image: webgoat/webgoat:v2023.5
+    restart: unless-stopped
+    networks:
+      websploit:
+        ipv4_address: 10.6.6.11
+
   juice-shop:
-	container_name: juice-shop
-	image: bkimminich/juice-shop
-	restart: unless-stopped
-	networks:
-  	websploit:
-    	ipv4_address: 10.6.6.12
+    container_name: juice-shop
+    image: bkimminich/juice-shop
+    restart: unless-stopped
+    networks:
+      websploit:
+        ipv4_address: 10.6.6.12
+
   dvwa:
-	container_name: dvwa
-	image: cambarts/arm-dvwa:latest
-	restart: unless-stopped
-	networks:
-  	websploit:
-    	ipv4_address: 10.6.6.13
+    container_name: dvwa
+    image: cambarts/arm-dvwa:latest
+    restart: unless-stopped
+    networks:
+      websploit:
+        ipv4_address: 10.6.6.13
+
 networks:
   websploit:
-	driver: bridge
-	ipam:
-  	config:
-    	- subnet: 10.6.6.0/24
-      	gateway: 10.6.6.1
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.6.6.0/24
+          gateway: 10.6.6.1
+
 ```
   - Build & start new docker containers & network
     - ```docker-compose up -d```
