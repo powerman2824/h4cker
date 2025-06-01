@@ -135,7 +135,7 @@ networks:
     - ![707](pics/707.png)
   - Use Websploit built in container scanner
     - ```containers```
-    ` ![710](pics/710.png)
+    - ![710](pics/710.png)
 
 </details>
 
