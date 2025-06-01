@@ -75,6 +75,15 @@ overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/866b8c8f7df850453eba
   - Move to Root's root directory to find the Websploit home directory ~/h4cker
     - ```cd ~/```
   - Stay in the root directory & shutdown & remove all running conatiners
+    - 1. Stop All Containers
+      - ```docker stop $(docker ps -aq)```
+    - 2. Remove All Containers
+      - ```docker rm $(docker ps -aq)```
+    - 3. (Optional) Clean Up Volumes and Networks
+       - ```docker volume prune -f```
+       - ```docker network prune -f```
+    - 4. (Optional) Verify Clean State
+      - ```docker ps -a```
 
 </details>
 
