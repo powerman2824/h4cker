@@ -6,70 +6,62 @@
 
 ### Lab Setup:
 
+<details>
+<summary>Equipment:</summary>
 
-#### Equipment:
+- **Model**:  
+  - Raspberry Pi 4 Model B  
+- **Operating System**:  
+  - Linux parrot 6.12.25+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64 GNU/Linux  
+- **Memory**:  
+  - 8GB  
+- **Storage**:  
+  - 128GB  
+- **Infographic**:  
+  - ![507](/pics/507.png)
+  - cmdline:
+```bash
+┌─[root@parrot]─[~]
+└──╼ #uname -a
+Linux parrot 6.12.25+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64 GNU/Linux
+┌─[root@parrot]─[~]
+└──╼ #free -h
+           	total    	used    	free  	shared  buff/cache   available
+Mem:       	7.6Gi   	3.0Gi   	1.5Gi   	486Mi   	3.7Gi   	4.6Gi
+Swap:       	99Mi   	512Ki    	99Mi
+┌─[root@parrot]─[~]
+└──╼ #df -h
+Filesystem  	Size  Used Avail Use% Mounted on
+udev        	3.6G 	0  3.6G   0% /dev
+tmpfs       	783M  1.8M  781M   1% /run
+/dev/mmcblk0p2  117G   32G   80G  29% /
+tmpfs       	3.9G 	0  3.9G   0% /dev/shm
+tmpfs       	5.0M   16K  5.0M   1% /run/lock
+/dev/mmcblk0p1  510M  156M  355M  31% /boot/firmware
+tmpfs       	783M   84K  783M   1% /run/user/1000
+overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/ed680fa0ce29360f2cbcff3d1632e2debeea5d656e754deff51308c9c2a05d1b/merged
+overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/7e4559539a5a7c09ae0f40149a342beef3b9b675cb3a17ad1ee8a138158325f3/merged
+overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/866b8c8f7df850453ebab6f9799e8fede3109b733d380ee62db85c2be9c19d69/merged
+┌─[root@parrot]─[~]
+└──╼ #
+```
+</details>
+<details>
+<summary>Installation:</summary>
 
+- **Download Operating System (Parrot or Kali)**:  
+  - [ParrotOS](https://www.parrotsec.org/)  
+- **Operating System**:  
+  - Linux parrot 6.12.25+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64 GNU/Linux  
+- **Memory**:  
+  - 8GB  
+- **Storage**:  
+  - 128GB  
+- **Infographic**:  
+  - ![507](/pics/507.png)
 
-##### Model:
+</details>
 
-
-###### Raspberry Pi 4 Model B
-
-
-##### Operating System:
-
-
-###### Linux parrot 6.12.25+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64 GNU/Linux
-
-
-##### Memory:
-
-
-###### 8G
-
-
-##### Storage:
-
-
-###### 128G
-
-
-##### InfoGraphic:
-
-
-###### 
-
-![507](C:/Users/mrcaf/Documents/h4ckForLife/507.png)
-
-- cmdline:
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
-<html><head><meta name="qrichtext" content="1" /><style type="text/css">
-p, li { white-space: pre-wrap; }
-</style></head><body style=" font-family:'Consolas'; font-size:9pt; font-weight:400; font-style:normal;">
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">┌─[root@parrot]─[~]</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">└──╼ #uname -a</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">Linux parrot 6.12.25+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64 GNU/Linux</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">┌─[root@parrot]─[~]</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">└──╼ #free -h</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">           	total    	used    	free  	shared  buff/cache   available</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">Mem:       	7.6Gi   	3.0Gi   	1.5Gi   	486Mi   	3.7Gi   	4.6Gi</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">Swap:       	99Mi   	512Ki    	99Mi</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">┌─[root@parrot]─[~]</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">└──╼ #df -h</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">Filesystem  	Size  Used Avail Use% Mounted on</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">udev        	3.6G 	0  3.6G   0% /dev</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">tmpfs       	783M  1.8M  781M   1% /run</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">/dev/mmcblk0p2  117G   32G   80G  29% /</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">tmpfs       	3.9G 	0  3.9G   0% /dev/shm</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">tmpfs       	5.0M   16K  5.0M   1% /run/lock</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">/dev/mmcblk0p1  510M  156M  355M  31% /boot/firmware</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">tmpfs       	783M   84K  783M   1% /run/user/1000</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/ed680fa0ce29360f2cbcff3d1632e2debeea5d656e754deff51308c9c2a05d1b/merged</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/7e4559539a5a7c09ae0f40149a342beef3b9b675cb3a17ad1ee8a138158325f3/merged</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">overlay     	117G   32G   80G  29% /var/lib/docker/overlay2/866b8c8f7df850453ebab6f9799e8fede3109b733d380ee62db85c2be9c19d69/merged</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">┌─[root@parrot]─[~]</p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;">└──╼ #</p></body></html>
 
 #### Installation:
 
