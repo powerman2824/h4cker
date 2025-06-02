@@ -1,3 +1,4 @@
+![coverart](pics/h4cker-github-thumbnail-1.png)
 # RaspberryPi4-WebSploit
 A penetration testing environment deployed on Raspberry Pi 4 running Parrot OS, using Dockerized vulnerable apps and standard recon tools (Nmap, Nikto, OWASP ZAP, and more).
 
@@ -199,8 +200,8 @@ networks:
   - Unlike Nikto, ZAP allows manual interaction, auth testing, and deeper scan customization
   - I can inspect HTTP headers, cookies, authentication flows, and inject test payloads
   - ZAP supports proxying a browser, ideal for dynamic and client-heavy web apps
-# Attack
 
-# ExFill & Reporting
+---
 
-# References
+### Topology Mind Map of Network
+![mindmap](pics/small-mindmap-h4cker-1.png)
